@@ -1,6 +1,5 @@
 import java.util.Arrays;
 import java.util.List;
-
 import model.anuncio.Anuncio;
 import model.imovel.Imovel;
 import model.usuario.Usuario;
@@ -10,7 +9,7 @@ import repositorio.CSVDataLoader;
 
 /**
  * Classe principal para executar o sistema MyHome Classificados.
- * Demonstra a integração de todos os 9 padrões de projeto implementados.
+ * Demonstra a integração de todos os 10 padrões de projeto implementados.
  *
  * Padrões demonstrados:
  * 1. Singleton - ConfiguracaoSistema
@@ -35,7 +34,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("╔══════════════════════════════════════════════════════════════╗");
         System.out.println("║           MyHome Classificados - Sistema de Imoveis          ║");
-        System.out.println("║     Demonstracao dos 9 Padroes de Projeto Implementados      ║");
+        System.out.println("║     Demonstracao dos 10 Padroes de Projeto Implementados      ║");
         System.out.println("║          Equipe: Janderson e Maria Eduarda - IFPB            ║");
         System.out.println("╚══════════════════════════════════════════════════════════════╝\n");
 

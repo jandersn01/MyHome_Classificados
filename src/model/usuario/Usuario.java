@@ -4,7 +4,7 @@ package model.usuario;
  * Classe que representa um usuário do sistema.
  * Pode ser um anunciante (proprietário/corretor) ou comprador/inquilino.
  */
-public class Usuario {
+public class Usuario{
 
     private String id;
     private String nome;
@@ -62,4 +62,5 @@ public class Usuario {
                 ", telefone='" + telefone + '\'' +
                 '}';
     }
+
 }
