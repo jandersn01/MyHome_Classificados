@@ -25,9 +25,13 @@ public abstract class Imovel implements Prototype<Imovel>  {
 	        this.area = area;
 	    }
 	    
-	    //construtordecopias
+	    // Construtor de cópia para suportar Prototype
 	    protected Imovel(Imovel outro) {
-	       //implementar
+	        this.titulo = outro.titulo;
+	        this.preco = outro.preco;
+	        this.descricao = outro.descricao;
+	        this.localizacao = outro.localizacao;
+	        this.area = outro.area;
 	    }
 	    
 
