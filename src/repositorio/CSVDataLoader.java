@@ -182,14 +182,9 @@ public class CSVDataLoader {
                 return new Casa(titulo, preco, descricao, localizacao, area, true, 3);
             case "apartamento":
                 return new Apartamento(titulo, preco, descricao, localizacao, area, 1, true, 2);
-            case "terreno":
-                return new Terreno(titulo, preco, descricao, localizacao, area, "Residencial");
             case "sala comercial":
             case "salacomercial":
                 return new SalaComercial(titulo, preco, descricao, localizacao, area, 10, true);
-            case "galpao":
-            case "galpão":
-                return new Galpao(titulo, preco, descricao, localizacao, area, 6.0, 5000);
             default:
                 return new Casa(titulo, preco, descricao, localizacao, area, false, 2);
         }
