@@ -1,4 +1,3 @@
-Para criar um README completo e profissional para o seu projeto **MyHome_Classificados**, utilize a estrutura abaixo baseada no código-fonte e nos padrões de projeto identificados:
 
 ---
 
