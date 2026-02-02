@@ -5,25 +5,25 @@ import model.imovel.Imovel;
 import model.usuario.Usuario;
 
 /**
- * Builder concreto para anúncios de VENDA.
+ * Builder concreto para anúncios de ALUGUEL.
  * RF08: Criação guiada de anúncios.
  */
-public class AnuncioVendaBuilder implements AnuncioBuilder {
+public class AnuncioAluguelBuilder implements AnuncioBuilder {
 
     private Anuncio anuncio;
-    private boolean aceitaFinanciamento;
-    private boolean aceitaPermuta;
+    private double valorCondominio;
+    private int tempoMinimoContrato; // em meses
 
-    public AnuncioVendaBuilder() {
+    public AnuncioAluguelBuilder() {
         this.reset();
     }
 
     @Override
     public AnuncioBuilder reset() {
         this.anuncio = new Anuncio();
-        this.anuncio.setTipoAnuncio("VENDA");
-        this.aceitaFinanciamento = false;
-        this.aceitaPermuta = false;
+        this.anuncio.setTipoAnuncio("ALUGUEL");
+        this.valorCondominio = 0;
+        this.tempoMinimoContrato = 12; // padrão: 12 meses
         return this;
     }
 
@@ -64,38 +64,39 @@ public class AnuncioVendaBuilder implements AnuncioBuilder {
     }
 
     /**
-     * Define se aceita financiamento (específico para venda).
+     * Define o valor do condomínio (específico para aluguel).
      */
-    public AnuncioVendaBuilder setAceitaFinanciamento(boolean aceita) {
-        this.aceitaFinanciamento = aceita;
+    public AnuncioAluguelBuilder setValorCondominio(double valor) {
+        this.valorCondominio = valor;
         return this;
     }
 
     /**
-     * Define se aceita permuta (específico para venda).
+     * Define o tempo mínimo de contrato em meses (específico para aluguel).
      */
-    public AnuncioVendaBuilder setAceitaPermuta(boolean aceita) {
-        this.aceitaPermuta = aceita;
+    public AnuncioAluguelBuilder setTempoMinimoContrato(int meses) {
+        this.tempoMinimoContrato = meses;
         return this;
     }
 
     @Override
     public Anuncio build() {
-        // Adiciona informações específicas de venda na descrição
-        String descricaoExtra = "";
-        if (aceitaFinanciamento) {
-            descricaoExtra += " | Aceita Financiamento";
-        }
-        if (aceitaPermuta) {
-            descricaoExtra += " | Aceita Permuta";
+        StringBuilder descricaoExtra = new StringBuilder();
+
+        if (valorCondominio > 0) {
+            descricaoExtra.append(" | Condominio: R$ ").append(valorCondominio);
         }
 
-        if (!descricaoExtra.isEmpty()) {
+        if (tempoMinimoContrato > 0) {
+            descricaoExtra.append(" | Contrato minimo: ").append(tempoMinimoContrato).append(" meses");
+        }
+
+        if (descricaoExtra.length() > 0) {
             String descricaoAtual = anuncio.getDescricao();
             if (descricaoAtual != null) {
-                anuncio.setDescricao(descricaoAtual + descricaoExtra);
+                anuncio.setDescricao(descricaoAtual + descricaoExtra.toString());
             } else {
-                anuncio.setDescricao(descricaoExtra);
+                anuncio.setDescricao(descricaoExtra.toString());
             }
         }
 
@@ -104,12 +105,11 @@ public class AnuncioVendaBuilder implements AnuncioBuilder {
         return resultado;
     }
 
-    // Getters para verificar configurações
-    public boolean isAceitaFinanciamento() {
-        return aceitaFinanciamento;
+    public double getValorCondominio() {
+        return valorCondominio;
     }
 
-    public boolean isAceitaPermuta() {
-        return aceitaPermuta;
+    public int getTempoMinimoContrato() {
+        return tempoMinimoContrato;
     }
 }
