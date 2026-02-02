@@ -4,7 +4,7 @@ import model.anuncio.Anuncio;
 
 /**
  * Estado Ativo - Anúncio aprovado e visível publicamente.
- * Permite vender ou suspender.
+ * Permite finalizar (venda/aluguel) ou suspender.
  */
 public class AtivoEstado implements EstadoAnuncio {
 
@@ -24,9 +24,9 @@ public class AtivoEstado implements EstadoAnuncio {
     }
 
     @Override
-    public void vender(Anuncio anuncio) {
-        anuncio.setEstado(new VendidoEstado());
-        anuncio.notificarObservers("VENDIDO");
+    public void finalizar(Anuncio anuncio) {
+        anuncio.setEstado(new FinalizadoEstado());
+        anuncio.notificarObservers("FINALIZADO");
     }
 
     @Override

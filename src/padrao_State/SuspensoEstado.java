@@ -24,7 +24,7 @@ public class SuspensoEstado implements EstadoAnuncio {
     }
 
     @Override
-    public void vender(Anuncio anuncio) {
+    public void finalizar(Anuncio anuncio) {
         // Operação não permitida neste estado
     }
 
