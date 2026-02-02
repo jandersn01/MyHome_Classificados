@@ -1,11 +1,8 @@
 titulo;descricao;preco;tipoImovel;localizacao;area;tipoAnuncio;fotos
 Casa em Manaira;Excelente casa com 3 quartos, suite master, quintal amplo e garagem para 2 carros;450000.00;casa;Manaira, Joao Pessoa;180.0;venda;img/casa1.jpg,img/casa2.jpg
 Apartamento Beira Mar;Apartamento de luxo com vista para o mar, 2 quartos, varanda gourmet;380000.00;apartamento;Cabo Branco, Joao Pessoa;95.0;venda;img/apto1.jpg
-Terreno em Intermares;Terreno plano em area nobre, pronto para construir, documentacao ok;120000.00;terreno;Intermares, Cabedelo;300.0;venda;img/terreno1.jpg
 Sala Comercial Centro;Sala comercial no centro da cidade, ideal para escritorio ou consultorio;2500.00;sala comercial;Centro, Joao Pessoa;45.0;aluguel;img/sala1.jpg
-Galpao Industrial;Galpao com pe direito de 8m, area de carga e descarga, portaria 24h;8500.00;galpao;Distrito Industrial, Joao Pessoa;800.0;aluguel;img/galpao1.jpg
 Casa Bancarios;Casa com 4 quartos, piscina, churrasqueira e area gourmet completa;520000.00;casa;Bancarios, Joao Pessoa;220.0;venda;img/casa3.jpg,img/casa4.jpg
 Apartamento Tambauzinho;Apartamento 3 quartos, 2 vagas, condominio com lazer completo;320000.00;apartamento;Tambauzinho, Joao Pessoa;110.0;venda;img/apto2.jpg
-Terreno Praia;Terreno de frente para o mar, oportunidade unica de investimento;850000.00;terreno;Praia do Bessa, Joao Pessoa;500.0;venda;img/terreno2.jpg
 Sala Empresarial;Sala moderna em edificio empresarial, ar condicionado central;3200.00;sala comercial;Altiplano, Joao Pessoa;60.0;aluguel;img/sala2.jpg
 Casa Compacta;Casa 2 quartos, garagem, em condominio fechado com seguranca;180000.00;casa;Valentina, Joao Pessoa;80.0;venda;img/casa5.jpg

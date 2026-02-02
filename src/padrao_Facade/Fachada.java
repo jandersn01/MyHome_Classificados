@@ -66,16 +66,11 @@ public class Fachada {
                 return new CasaFactory();
             case "apartamento":
                 return new ApartamentoFactory();
-            case "terreno":
-                return new TerrenoFactory();
             case "sala comercial":
             case "salacomercial":
                 return new SalaComercialFactory();
-            case "galpao":
-            case "galpão":
-                return new GalpaoFactory();
             default:
-                return new CasaFactory(); // Padrão
+                return new CasaFactory(); // Padrao
         }
     }
 

@@ -120,18 +120,18 @@ public class Main {
         System.out.println("│ 3. FACTORY METHOD - Criacao de Imoveis (RF01)                  │");
         System.out.println("└────────────────────────────────────────────────────────────────┘");
 
-        // Cria diferentes tipos de imóveis via factory
+        // Cria diferentes tipos de imoveis via factory
         Imovel casa = fachada.criarImovel("casa", "Casa Nova", 300000,
             "Casa com 3 quartos", "Manaira", 150);
         Imovel apto = fachada.criarImovel("apartamento", "Apto Luxo", 450000,
             "Apartamento de luxo", "Beira Mar", 120);
-        Imovel galpao = fachada.criarImovel("galpao", "Galpao Industrial", 800000,
-            "Galpao para industria", "Distrito Industrial", 1000);
+        Imovel sala = fachada.criarImovel("sala comercial", "Sala Empresarial", 250000,
+            "Sala comercial no centro", "Centro", 80);
 
         System.out.println("Imoveis criados via Factory Method:");
         System.out.println("  - " + casa.getTipoImovel() + ": " + casa.getTitulo());
         System.out.println("  - " + apto.getTipoImovel() + ": " + apto.getTitulo());
-        System.out.println("  - " + galpao.getTipoImovel() + ": " + galpao.getTitulo());
+        System.out.println("  - " + sala.getTipoImovel() + ": " + sala.getTitulo());
         System.out.println();
     }
 
