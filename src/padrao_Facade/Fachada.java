@@ -150,11 +150,26 @@ public class Fachada {
 
     // ==================== MODERAÇÃO (RF03) ====================
 
+    /**
+     * Define a estrategia de moderacao (automatica ou manual).
+     * Permite trocar dinamicamente como os anuncios serao moderados.
+     */
+    public void setEstrategiaModeracao(ModeracaoStrategy estrategia) {
+        this.estrategiaModeracao = estrategia;
+    }
+
+    /**
+     * Retorna a estrategia de moderacao atual.
+     */
+    public ModeracaoStrategy getEstrategiaModeracao() {
+        return this.estrategiaModeracao;
+    }
+
     public String submeterParaModeracao(Anuncio anuncio) {
-        // Primeiro submete (muda estado para Moderação)
+        // Primeiro submete (muda estado para Moderacao)
         anuncio.submeter();
 
-        // Executa moderação
+        // Executa moderacao usando a estrategia configurada
         boolean aprovado = estrategiaModeracao.executarModeracao(anuncio);
 
         return estrategiaModeracao.getRelatorio();
