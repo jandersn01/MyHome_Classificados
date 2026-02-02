@@ -257,8 +257,8 @@ public class Fachada {
     // ==================== OPERAÇÕES DE NEGÓCIO ====================
 
 
-    public void venderAnuncio(Anuncio anuncio) {
-        anuncio.vender();
+    public void finalizarAnuncio(Anuncio anuncio) {
+        anuncio.finalizar();
     }
 
     public void suspenderAnuncio(Anuncio anuncio) {

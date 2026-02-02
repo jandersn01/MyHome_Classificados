@@ -24,9 +24,9 @@ public interface EstadoAnuncio {
     void reprovar(Anuncio anuncio);
 
     /**
-     * Marca o anúncio como vendido (estado final).
+     * Marca o anúncio como finalizado (vendido/alugado - estado final).
      */
-    void vender(Anuncio anuncio);
+    void finalizar(Anuncio anuncio);
 
     /**
      * Suspende o anúncio (pode voltar para Rascunho).

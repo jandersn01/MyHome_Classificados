@@ -3,44 +3,43 @@ package padrao_State;
 import model.anuncio.Anuncio;
 
 /**
- * Estado Rascunho - Estado inicial do anúncio.
- * Permite apenas enviar para moderação.
+ * Estado Finalizado - Estado final (vendido/alugado - arquivado).
+ * Nao permite nenhuma transicao.
  */
-public class RascunhoEstado implements EstadoAnuncio {
+public class FinalizadoEstado implements EstadoAnuncio {
 
     @Override
     public void enviarParaModeracao(Anuncio anuncio) {
-        anuncio.setEstado(new ModeracaoEstado());
-        anuncio.notificarObservers("ENVIADO_MODERACAO");
+        // Estado final - nenhuma transicao permitida
     }
 
     @Override
     public void aprovar(Anuncio anuncio) {
-        // Operação não permitida neste estado
+        // Estado final - nenhuma transicao permitida
     }
 
     @Override
     public void reprovar(Anuncio anuncio) {
-        // Operação não permitida neste estado
+        // Estado final - nenhuma transicao permitida
     }
 
     @Override
     public void finalizar(Anuncio anuncio) {
-        // Operação não permitida neste estado
+        // Ja esta finalizado
     }
 
     @Override
     public void suspender(Anuncio anuncio) {
-        // Operação não permitida neste estado
+        // Estado final - nenhuma transicao permitida
     }
 
     @Override
     public void reativar(Anuncio anuncio) {
-        // Já está em rascunho
+        // Estado final - nenhuma transicao permitida
     }
 
     @Override
     public String getNomeEstado() {
-        return "Rascunho";
+        return "Finalizado";
     }
 }

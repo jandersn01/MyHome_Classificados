@@ -90,8 +90,8 @@ public class Anuncio implements Prototype<Anuncio> {
         estado.reprovar(this);
     }
 
-    public void vender() {
-        estado.vender(this);
+    public void finalizar() {
+        estado.finalizar(this);
     }
 
     public void suspender() {
